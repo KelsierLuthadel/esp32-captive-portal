@@ -108,7 +108,7 @@ void CaptivePortal::handleClient(WiFiClient& client) {
                         this->m_logins++;
                         this->stats();
                         String email    = urlDecode(extractValue(requestBody, "email"));
-                       
+                        // todo: do not store email, that is naughty. 
                     }
                 }
 
@@ -155,7 +155,7 @@ void CaptivePortal::handleClient(WiFiClient& client) {
 void CaptivePortal::stats() {
     String conn = String(this->m_connections);
     String login = String(this->m_logins);
-    String score = conn + "x" + login;
+    String score = "Stats: " +conn + "x" + login;
 
     this->m_display->clear(BLACK);
 
@@ -180,7 +180,7 @@ void CaptivePortal::stats() {
 
     this->m_display->setTextColor(WHITE);
     this->m_display->cursorBottom(
-
+        
     );
     this->m_display->output_right(score);
     

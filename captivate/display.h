@@ -52,7 +52,6 @@ public:
   void resetCursor(int16_t x, int16_t y);
   void cursorBottom();
 
-
   void setFont(const GFXfont *f = nullptr);
   void setTextSize(uint8_t size);
 

@@ -18,9 +18,9 @@ void setup() {
     display.output("Offensive ");
     display.setTextColor(YELLOW);
     display.outputln("Security");
-
-    display.setTextColor(WHITE);
+    
     display.output("Creative ");
+    display.setTextColor(WHITE);
     display.outputln("Destruction");
 
     display.setCursor(8, 64);
